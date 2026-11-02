@@ -1,0 +1,144 @@
+@font-face {
+    font-family: 'RobotoRegular';
+    src: url('fonts/Roboto-Regular.ttf') 
+}
+
+@font-face {
+    font-family: 'RobotoMedium';
+    src: url('fonts/Roboto-Medium.ttf');
+}
+
+body {
+    background-color: #f4e1d8;
+    color:#4A3F35;
+    margin: 0;
+}
+
+#main-header {
+    display: flex;
+    font-size: 24px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 5%;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+#title {
+    margin: 0;
+    font-family: 'RobotoMedium', sans-serif;
+}
+
+nav {
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f4e1d8;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: flex-end;
+    padding: 0;
+    margin-left: auto;
+    align-items: center;
+    list-style: none;
+}
+
+.nav-links a {
+    display: block;
+    padding: 20px 16px;
+    color:#4A3F35;
+    text-decoration: none;
+    font-size: 16px;
+    font-family: RobotoMedium;
+    text-transform: uppercase;
+    transition: all ease-in-out 100ms;
+    box-sizing: border-box;
+}
+
+.nav-links a:hover {
+    background-color: #4A3F35;
+    color: #f4e1d8;
+    border: 2px solid #4A3F35;
+}
+
+.nav-links .nav-cta-button {
+    background-color: #4A3F35;
+    color: #f4e1d8;
+    border: 2px solid #f4e1d8;
+    border-radius: 50px;
+    padding: 10px 20px;
+    margin-left: 16px;
+    margin-right: 16px;
+}
+
+.nav-links .nav-cta-button:hover {
+    background-color: #f4e1d8;
+    color: #4A3F35;
+    border: 2px solid #4A3F35;
+}
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+    padding: 30px 16px;
+    width: 34px;
+}
+
+.hamburger .bar {
+    flex-basis: 100%;
+    height: 4px;
+    background-color: #4A3F35;
+    margin: 3px 0;
+}
+
+/* Mobile Phone */
+@media (max-width: 768px) {
+    .hamburger {
+        display: flex;
+        flex-wrap: wrap;
+    }  
+
+    nav {
+        flex-wrap: wrap;
+    }
+
+    .nav-links {
+        display: none;
+        flex-basis: 100%;
+        flex-wrap: wrap;
+    }
+
+    .nav-links li {
+        flex-basis: 100%;
+    }
+
+    .nav-links a {
+        font-size: 20px;
+        text-align: center;
+    }
+
+    .nav-links a:hover {
+        background-color: #4A3F35;
+        color: #f4e1d8;
+        border: 2px solid #4A3F35;
+    }
+
+    .nav-links .nav-cta-button {
+        padding: 30px 16px;
+        margin-left: 0;
+        border: none;
+        border-radius: 0;
+        margin-bottom: 20px;
+    }
+
+    .nav-links .nav-cta-button:hover {
+        background-color: #4A3F35;
+        color: #f4e1d8;
+        border: 2px solid #4A3F35;
+    }
+}
